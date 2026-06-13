@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShieldVPN Client</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="cyber">
+  <div class="noise"></div>
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+
+  <header class="titlebar">
+    <div class="brand"><span class="logo">🛡</span><span>ShieldVPN</span><em>REAL CORE</em></div>
+    <div class="window-actions">
+      <button id="minBtn" title="Свернуть">—</button>
+      <button id="closeBtn" title="Закрыть">×</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="avatar">S</div>
+        <div><b>Shield User</b><span id="engineText">Проверяю core…</span></div>
+      </div>
+
+      <button class="nav-btn active" data-page="connect">⏻ <span>Connect</span></button>
+      <button class="nav-btn" data-page="servers">🌍 <span>Servers</span></button>
+      <button class="nav-btn" data-page="settings">⚙ <span>Settings</span></button>
+      <button class="nav-btn" data-page="logs">⌁ <span>Live Logs</span></button>
+
+      <div class="mini-stats">
+        <div><span>Download</span><b id="downSpeed">0 Mb/s</b></div>
+        <div><span>Upload</span><b id="upSpeed">0 Mb/s</b></div>
+        <div><span>Ping</span><b id="pingValue">— ms</b></div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section class="page active" id="page-connect">
+        <div class="hero-card">
+          <div class="status-row">
+            <div>
+              <p class="eyebrow">VPN STATUS</p>
+              <h1 id="statusTitle">Не подключено</h1>
+              <p id="statusSub">Вставь VPN-ключ или subscription URL и нажми подключиться.</p>
+            </div>
+            <div class="status-chip" id="statusChip">OFFLINE</div>
+          </div>
+
+          <div class="orb-button" id="orbButton"><span>⏻</span></div>
+
+          <label class="key-label" for="vpnKey">VPN-ключ / subscription URL</label>
+          <textarea id="vpnKey" spellcheck="false" placeholder="vless://...&#10;vmess://...&#10;trojan://...&#10;ss://...&#10;https://example.com/subscription"></textarea>
+
+          <div class="connect-actions">
+            <button class="primary" id="connectBtn">Подключиться</button>
+            <button class="ghost" id="disconnectBtn">Отключиться</button>
+          </div>
+
+          <div class="error" id="errorBox"></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-servers">
+        <div class="section-head"><p class="eyebrow">SMART ROUTE</p><h2>Витрина серверов</h2></div>
+        <div class="server-grid">
+          <div class="server-card selected"><span>🇳🇱</span><b>Amsterdam Ultra</b><small>28 ms · Recommended</small></div>
+          <div class="server-card"><span>🇩🇪</span><b>Frankfurt Edge</b><small>34 ms · Streaming</small></div>
+          <div class="server-card"><span>🇺🇸</span><b>New York Core</b><small>91 ms · Gaming</small></div>
+          <div class="server-card"><span>🇯🇵</span><b>Tokyo Spark</b><small>142 ms · Asia</small></div>
+        </div>
+        <p class="note">Список серверов визуальный. Реальный сервер берётся из вставленного VPN-ключа.</p>
+      </section>
+
+      <section class="page" id="page-settings">
+        <div class="section-head"><p class="eyebrow">CUSTOMIZE</p><h2>Темы оформления</h2></div>
+        <div class="theme-grid">
+          <button class="theme-card" data-theme="cyber"><b>Cyberpunk Neon</b><span>Фиолетовый / голубой</span></button>
+          <button class="theme-card" data-theme="ocean"><b>Midnight Ocean</b><span>Глубокий синий</span></button>
+          <button class="theme-card" data-theme="forest"><b>Forest Calm</b><span>Зелёный / природный</span></button>
+          <button class="theme-card" data-theme="light"><b>Elegant Light</b><span>Светлый минимализм</span></button>
+          <button class="theme-card" data-theme="sunset"><b>Sunset Glow</b><span>Розовый / оранжевый</span></button>
+        </div>
+      </section>
+
+      <section class="page" id="page-logs">
+        <div class="section-head"><p class="eyebrow">CORE OUTPUT</p><h2>Live Logs</h2></div>
+        <pre id="logBox">Готов к запуску VPN-core…</pre>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

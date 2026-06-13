@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShieldVPN Launcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="mesh m1"></div><div class="mesh m2"></div><div class="mesh m3"></div>
+  <header class="titlebar">
+    <div class="brand"><span class="logo">🛡</span><strong>ShieldVPN</strong><em>Launcher</em></div>
+    <div class="window-actions"><button id="minBtn" title="Свернуть"><span></span></button><button id="closeBtn" title="Закрыть">×</button></div>
+  </header>
+  <main class="shell">
+    <section class="hero-panel">
+      <div class="badge">AUTO UPDATE CENTER</div>
+      <h1>Приветствую,<br>уважаемый пользователь!</h1>
+      <p class="lead">Лаунчер проверяет версию ShieldVPN Client, скачивает обновления, открывает установщик и запускает приложение одной кнопкой.</p>
+      <div class="actions">
+        <button class="primary" id="mainActionBtn">Проверяю…</button>
+        <button class="secondary" id="openBtn">Открыть приложение</button>
+      </div>
+      <div class="mini-row"><span id="launcherVersion">Launcher</span><span id="sourceText">Источник обновлений…</span></div>
+    </section>
+    <section class="status-panel">
+      <div class="ring"><span id="percent">0%</span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="status-card" id="statusCard"><b id="statusTitle">Проверяю состояние…</b><span id="statusText">Секунду, смотрю установлен ли клиент.</span></div>
+      <div class="steps"><div class="step active" data-step="0"><b>1</b><span>Проверка</span></div><div class="step" data-step="1"><b>2</b><span>Загрузка</span></div><div class="step" data-step="2"><b>3</b><span>Установка</span></div><div class="step" data-step="3"><b>4</b><span>Запуск</span></div></div>
+      <details id="detailsBox"><summary>Технические детали</summary><pre id="detailsText"></pre></details>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "name": "shieldvpn-client",
+  "version": "2.1.0",
+  "description": "ShieldVPN real VPN client powered by sing-box",
+  "main": "main.js",
+  "author": "ShieldVPN",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win nsis",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.shieldvpn.client",
+    "productName": "ShieldVPN Client",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "lib/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "engines",
+        "to": "engines",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "ShieldVPNClientSetup.exe",
+      "requestedExecutionLevel": "requireAdministrator",
+      "publisherName": "ShieldVPN"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ShieldVPN Client",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}
