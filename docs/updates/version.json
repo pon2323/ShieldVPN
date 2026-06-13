@@ -1,11 +1,13 @@
 {
   "latestVersion": "2.1.0",
-  "clientFile": "ShieldVPNClientSetup.exe",
-  "downloadUrl": "https://github.com/pon2323/ShieldVPN/releases/latest/download/ShieldVPNClientSetup.exe",
+  "clientFileName": "ShieldVPNClientSetup.exe",
+  "clientUrl": "https://github.com/pon2323/ShieldVPN/releases/latest/download/ShieldVPNClientSetup.exe",
+  "launcherUrl": "https://github.com/pon2323/ShieldVPN/releases/latest/download/ShieldVPNLauncherSetup.exe",
   "releaseNotes": [
-    "Новый лаунчер обновлений",
-    "Современный интерфейс клиента",
-    "Поддержка реального VPN-core через sing-box",
-    "Улучшенные сообщения об ошибках"
-  ]
+    "Исправлена кодировка русского текста в лаунчере.",
+    "Лаунчер теперь смотрит на правильный manifest GitHub Pages: pon2323/ShieldVPN.",
+    "Понятные статусы: Установить, Обновить, Открыть.",
+    "Клиент использует реальный VPN-core sing-box через TUN."
+  ],
+  "sha256": ""
 }
