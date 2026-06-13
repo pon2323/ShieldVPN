@@ -1,13 +1,13 @@
 {
-  "latestVersion": "2.1.0",
+  "latestVersion": "2.3.0",
   "clientFileName": "ShieldVPNClientSetup.exe",
   "clientUrl": "https://github.com/pon2323/ShieldVPN/releases/latest/download/ShieldVPNClientSetup.exe",
   "launcherUrl": "https://github.com/pon2323/ShieldVPN/releases/latest/download/ShieldVPNLauncherSetup.exe",
   "releaseNotes": [
-    "Исправлена кодировка русского текста в лаунчере.",
-    "Лаунчер теперь смотрит на правильный manifest GitHub Pages: pon2323/ShieldVPN.",
-    "Понятные статусы: Установить, Обновить, Открыть.",
-    "Клиент использует реальный VPN-core sing-box через TUN."
+    "Исправлен FATAL legacy DNS servers для sing-box 1.12+.",
+    "DNS-конфиг переведён на новый формат sing-box.",
+    "Добавлен fallback ENABLE_DEPRECATED_LEGACY_DNS_SERVERS для чужих legacy JSON-конфигов.",
+    "Улучшена совместимость с subscription-профилями VLESS/Reality."
   ],
   "sha256": ""
 }
