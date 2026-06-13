@@ -1,0 +1,11 @@
+{
+  "latestVersion": "2.1.0",
+  "clientFile": "ShieldVPNClientSetup.exe",
+  "downloadUrl": "https://github.com/pon2323/ShieldVPN/releases/latest/download/ShieldVPNClientSetup.exe",
+  "releaseNotes": [
+    "Новый лаунчер обновлений",
+    "Современный интерфейс клиента",
+    "Поддержка реального VPN-core через sing-box",
+    "Улучшенные сообщения об ошибках"
+  ]
+}
